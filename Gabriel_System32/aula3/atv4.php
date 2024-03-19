@@ -1,20 +1,51 @@
-<form action="" method="GET">
-<label>base: </label>
-<input name="b" type="text">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv2</title>
+</head>
+<body>
 
-<label>altura: </label>
-<input name="a" type="text">
+    <form action="" method="GET">
+        <label>Insira uma letra</label>
+        <input name= "ler" type="text">
+        <button type="submit">Enviar</button>
+    </form>
 
-<button type="submit">Converter</button>
 
-</form>
+    <?php
 
-<?php
+    $ler = strtoupper($_GET ['ler']);  
+    
 
-$b = $_GET ['b'];
-$a = $_GET ['a'];
 
-echo "A área do retângulo é: ".($b*$a);
-echo "<br>E o dobro deste retângulo é: ".(2*($b*$a));
+    switch($ler){
+        case 'A':
+            echo $ler. " é vogal";
+            break;
+            case 'E':
+                echo $ler. " é vogal";
+                break;
+                case 'I':
+                    echo $ler. " é vogal";
+                    break;
+                    case 'O':
+                        echo $ler. " é vogal";
+                        break;
+                        case 'U':
+                            echo $ler. " é vogal";
+                            break;
 
-?>
+        default:
+            echo $ler. " é consoante";
+            
+    }
+        
+
+  
+
+    ?>
+
+</body>
+</html>

@@ -1,15 +1,38 @@
-<form action="" method="GET">
-<label>Digite um distância em metros</label>
-<input name="m" type="text">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv1</title>
+</head>
+<body>
 
-<button type="submit">Converter</button>
+    <form action="" method="GET">
+    <label>F ou M:</label>
+    <input name= "sexo" type="text">
+    <button type="submit">Enviar</button>
+    </form>
 
-</form>
+    
+    <?php
 
-<?php
+    $sexo = strtoupper($_GET['sexo']);
+    echo "<br>Sexo BB: " . $sexo;
 
-$m = $_GET ['m'];
+    switch ($sexo){
+        case 'F':
+            echo "<br>Você escolheu F - Feminino";
+            break;
+        
+        case 'M': 
+            echo "<br>Você escolheu M - Masculino";
+            break;
+        default:
+            echo "Opção inválida";
+        
+    }
 
-echo "A distância em cm é: ". ($m*100)."cm";
+    ?>
 
-?>
+</body>
+</html>
